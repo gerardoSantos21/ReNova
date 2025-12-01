@@ -1,0 +1,86 @@
+@import url(variables.css);
+/*
+ * 1. Reseteo de Box Model: Asegura que el padding y el border no aumenten el tamaño final de los elementos.
+ */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*
+ * 2. Reset Básico: Elimina márgenes y paddings predeterminados en todos los elementos.
+ */
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * 3. Configuración para el Body: Define tipografía base y facilita el control de la altura.
+ */
+body {
+    min-height: 100vh; /* Asegura que el body use toda la altura de la ventana */
+    line-height: 1.5; /* Altura de línea estándar para mejor lectura */
+    text-rendering: optimizeSpeed; /* Prioriza la velocidad sobre la precisión en el renderizado de texto */
+    font-family: var(--fuentePrincipal); /* Fuente de respaldo, reemplaza esto con tu fuente principal */
+    font-size: 62.5%; /* 1rem = 10px si el tamaño base del navegador es 16px */
+}
+
+/*
+ * 4. Eliminar el estilo de lista predeterminado en elementos que tengan un rol de navegación.
+ */
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+/*
+ * 5. Mejorar el manejo de media (imágenes, videos, etc.)
+ * Asegura que las imágenes no se desborden y facilita su alineación.
+ */
+img, picture, video, canvas, svg {
+    display: block; /* Trata la media como bloques */
+    max-width: 100%; /* Evita desbordamiento en contenedores */
+}
+
+/*
+ * 6. Heredar el estilo de fuente y línea en formularios y botones.
+ */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/*
+ * 7. Eliminar animaciones y transiciones si el usuario ha solicitado reducir el movimiento.
+ */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*
+ * 8. Reseteo de Enlaces: Opcional, pero útil si quieres quitar el subrayado de todos los enlaces.
+ */
+a {
+    text-decoration: none;
+    color: inherit; /* Hereda el color del padre */
+}
+
+/*
+ * 9. Reseteo para Títulos y Bloques de Contenido:
+ * Asegura que los elementos de título no sean ignorados accidentalmente.
+ */
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+p {
+    text-wrap: pretty;
+}

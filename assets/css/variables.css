@@ -1,0 +1,10 @@
+:root {
+    /* Colores */
+    --colorPrincipal: #23A6F0;
+    --grisSuave: #F7F8FA;
+    --negro: #272727;
+
+    /* Fuentes */
+    --fuentePrincipal: 'Poppins', sans-serif;
+    --fuenteLogo: 'Tilt Warp', sans-serif;
+}
