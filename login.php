@@ -1,11 +1,24 @@
 <?php
 // 1. INICIO DE LÓGICA PHP
-// Aquí es donde se recibiran los datos cuando el usuario de clic en "Iniciar Sesión"
+session_start(); // Inicia la sesión para poder guardar datos del usuario
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $password = $_POST['password'];
     
-    // Aquí ira el código para verificar en la base de datos
+    // --- AQUÍ IRÁ TU CÓDIGO DE BASE DE DATOS DESPUÉS ---
+    // Por ahora, simularemos que el usuario y contraseña son correctos
+    // para que veas cómo funciona la redirección.
+    
+    if (!empty($email) && !empty($password)) {
+        
+        // ESTA ES LA LÍNEA MÁGICA QUE TE MANDA AL INDEX:
+        header("Location: index.php");
+        exit(); // Importante: detiene el script para asegurar la redirección
+        
+    } else {
+        echo "<script>alert('Por favor llena todos los campos');</script>";
+    }
 }
 ?>
 
@@ -14,10 +27,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReNova - Iniciar Sesión</title>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="login.css">
+    
 </head> <body>
     
     <?php require 'includes/header.php'; ?>
@@ -42,11 +58,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </div>
             <button type="submit">Iniciar Sesión</button>
         </form>
-    </div>
+
+
+    <div class="spt-container">
+    <div class="spt-line"></div>
+    <span class="spt-text">O</span>
+    <div class="spt-line"></div>
+</div>
+
+<div class="social-row">
+    <a href="#" class="social-btn">
+        <img src="assets/img/google.svg" alt="Google" class="social-icon">
+        <span>Google</span>
+    </a>
+
+    <a href="#" class="social-btn">
+        <img src="assets/img/facebook.svg" alt="Facebook" class="social-icon">
+        <span>Facebook</span>
+    </a>
+</div>
 
     <div class="sign">
-        No tiene cuenta? <a href="sign.php">Cree Una...</a> <!-- //aun me falta crear el archivo de crear cuenta -->
+        ¿No Tienes una Cuenta? <a href="sign.php">Registrarse</a> <!-- //aun me falta crear el archivo de crear cuenta -->
     </div>
-
+</div>
 </body>
 </html>

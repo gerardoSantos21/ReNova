@@ -1,27 +1,31 @@
-@import url("/assets/css/variables.css");
+@import url("assets/css/variables.css");
 body {
     background-color: #f4f6f9;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    justify-content: center;
+    align-items: center;
 }
 
 .cnt {
-    width: 100%;
-    height: 30rem;
-    font-size: 1.4rem;
+    width: 400px;
+    max-width: 90%;
+    height: auto;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0,.05);
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding-bottom: 150px;
 
 }
 
 .cnt h2 {
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     color: #060505;
+    text-align: center;
 }
 .cnt p {
     margin-top: -5px;
@@ -31,7 +35,8 @@ body {
 }
 
 .frm {
-    margin-top: 50px; 
+    margin-top: 10px;
+    width:100%; 
 }
 
 .cr{
@@ -44,7 +49,7 @@ body {
 }
 
 input {
-    width: 300px;
+    width: 100%;
     padding: 12px;
     font-size: 1rem;
     border: none; 
@@ -86,13 +91,13 @@ input {
 
 button {
     width: 100%;
-    margin: 20px 0;
+    margin: 10px 0 20px 0;
     padding: 12px;
-    background-color: var(--colorPrincipal); 
+    background-color: var(--colorPrincipal, #007BFF); 
     border: none;
     border-radius: 8px;
     color: #fff;
-    font-size: 0.7rem;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: 0.2s;
@@ -101,15 +106,75 @@ button:hover {
     background-color: var(--colorSecundario);
 }
 
+/* --- 1. Estilos del Separador --- */
+.spt-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #6c757d; /* Gris texto */
+}
+
+.spt-line {
+    flex-grow: 1; /* Estira la línea para llenar espacio */
+    height: 1px;
+    background-color: #dee2e6; /* Gris línea */
+}
+
+.spt-text {
+    padding: 0 15px; /* Espacio alrededor de la "O" */
+    font-weight: 500;
+    font-size: 14px;
+}
+
+/* --- 2. Estilos del Contenedor de Botones --- */
+.social-row {
+    display: flex;
+    gap: 15px; /* Espacio entre el botón de Google y Facebook */
+    width: 100%;
+    margin-bottom: 20px
+}
+
+/* --- 3. Estilos de los Botones --- */
+.social-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%; /* Cada botón ocupa la mitad */
+    padding: 10px;
+    background-color: white;
+    border: 1px solid #ced4da; /* Borde gris suave */
+    border-radius: 8px;
+    border-radius: 5px; /* Bordes redondeados */
+    text-decoration: none; /* Quita el subrayado del link */
+    color: #333; /* Color de letra negro/gris oscuro */
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.social-btn:hover {
+    background-color: #f8f9fa; /* Cambio de color ligero al pasar el mouse */
+    border-color: #b6b6b6;
+}
+
+/* --- 4. CONTROL DE TUS ICONOS LOCALES --- */
+.social-icon {
+    width: 20px;  /* Forzamos que el icono mida 20px */
+    height: 20px;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+    object-fit: contain; /* Asegura que la imagen no se deforme */
+}
 .sign {
-margin-bottom: 20px;
+    margin-bottom: 20px;
     font-size: 14px;
     text-align: center;
-    margin-bottom: 2rem;
 }
 
 .sign a {
+    font-weight: bold;
     color: #007BFF;
     text-decoration: none;
+
 }
     
