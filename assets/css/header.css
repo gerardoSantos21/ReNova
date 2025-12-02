@@ -1,0 +1,52 @@
+@import url(variables.css);
+
+/* Estilos para el encabezado de la página */
+header {
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    border-bottom: 1px solid #ececec;
+}
+
+.logo-content {
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+}
+
+.logo-content img {
+    width: 2.2rem;
+    height: 2.2rem;
+}
+
+.logo-content h1 {
+    font-family: var(--fuenteLogo);
+    font-size: 1.6rem;
+    color: var(--colorPrincipal);
+    font-synthesis-weight: none;
+}
+
+.navegacion {
+    display: flex;
+    gap: 4rem;
+}
+
+.navegacion a:first-of-type {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.navegacion a {
+    font-weight: 500;
+}
+
+.sesion_icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-right: 20px;
+}
