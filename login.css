@@ -1,0 +1,115 @@
+@import url("/assets/css/variables.css");
+body {
+    background-color: #f4f6f9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.cnt {
+    width: 100%;
+    height: 30rem;
+    font-size: 1.4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+
+}
+
+.cnt h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #060505;
+}
+.cnt p {
+    margin-top: -5px;
+    margin-bottom: 25px;
+    color: #666;
+    font-size: 14px;
+}
+
+.frm {
+    margin-top: 50px; 
+}
+
+.cr{
+    display: block;
+    text-align: right;
+    font-size: 0.8rem;
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+input {
+    width: 300px;
+    padding: 12px;
+    font-size: 1rem;
+    border: none; 
+    outline: none;
+    background: transparent; 
+}
+
+.group-icon {
+    width: 100%;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff; /* Aseguramos fondo blanco */
+    /* Usamos Flexbox para alinear icono e input */
+    display: flex;
+    align-items: center;
+    padding-left: 15px; /* Espacio antes del icono */
+    overflow: hidden; /* Asegura que nada se salga de las esquinas redondas */
+}
+
+
+.input-icon {
+    width: 20px;       
+    height: 20px;      
+    flex-shrink: 0; 
+    object-fit: contain;
+    vertical-align: middle;
+    opacity: 0.6;   
+}
+
+.icon-email {
+    transform: scale(0.85); /* Reduje el size del icono por que esta mas grande que el otro al 85% de su tamaño real */
+}
+
+
+.icon-psw {
+    transform: scale(1.1); /* Esto lo agranda un 10% más */
+}
+
+button {
+    width: 100%;
+    margin: 20px 0;
+    padding: 12px;
+    background-color: var(--colorPrincipal); 
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    background-color: var(--colorSecundario);
+}
+
+.sign {
+margin-bottom: 20px;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sign a {
+    color: #007BFF;
+    text-decoration: none;
+}
+    
