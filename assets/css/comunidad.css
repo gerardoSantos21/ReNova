@@ -1,0 +1,77 @@
+@import url(variables.css);
+
+.comunidad {
+    width: 100%;
+    background: rgba(35, 166, 240, 0.10);
+    padding: 60px 0;
+}
+
+.comunidad-content {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.comunidad-content h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.comunidad-content p:first-of-type {
+    font-size: 18px;
+    color: #5E6E89;
+}
+
+.opiniones-container {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+}
+
+.opiniones-card {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 24px 0 rgba(139, 167, 178, 0.16);
+    padding: 0 44px;
+}
+
+.opiniones-card p:nth-child(3){
+    font-size: 22px;
+    color: black;
+    font-weight: 500;
+}
+
+.opiniones-card p:last-child{
+    font-size: 18px;
+    color: #7C8087;
+}
+
+.img-person {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background-image: url(../img/person1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.person2 {
+    background-image: url(../img/person2.jpg);
+}
+
+.person3 {
+    background-image: url(../img/person3.jpg);
+}
+
+.opiniones-calificacion {
+    display: flex;
+    gap: 6px;
+}
