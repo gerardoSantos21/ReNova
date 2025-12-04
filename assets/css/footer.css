@@ -1,0 +1,60 @@
+@import url(variables.css);
+
+footer {
+    width: 100%;
+    height: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    bottom: 0;
+    background-color: var(--negro);
+    margin-top: 3rem;
+}
+
+.footer-container {
+    width: 80%;
+    border-top: 1px solid white;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    padding-top: 12px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.logo-footer p {
+    margin-top: 6px;
+    font-size: 16px;
+}
+
+.logo--v2 h1 {
+    color: white;
+}
+
+.FQA {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.FQA a {
+    display: block;
+    margin-top: 18px;
+}
+
+.FQA-section h4 {
+    color: var(--colorPrincipal);
+}
+
+.copyright {
+    background-color: whitesmoke;
+    width: 100%;
+    color: #5E6E89;
+    padding: 1.2rem 10%;
+}
+
+.copyright p {
+    font-size: 14px;
+}
