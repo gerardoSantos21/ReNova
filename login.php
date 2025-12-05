@@ -1,23 +1,45 @@
+
 <?php
-// 1. INICIO DE LÓGICA PHP
-session_start(); // Inicia la sesión para poder guardar datos del usuario
+session_start();
+
+require 'includes/conexion.php';
+
+$error = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
     
-    // --- AQUÍ IRÁ TU CÓDIGO DE BASE DE DATOS DESPUÉS ---
-    // Por ahora, simularemos que el usuario y contraseña son correctos
-    // para que veas cómo funciona la redirección.
-    
+    $email = trim($_POST['email']);
+    $password = trim($_POST['password']);
+
     if (!empty($email) && !empty($password)) {
         
-        // ESTA ES LA LÍNEA MÁGICA QUE TE MANDA AL INDEX:
-        header("Location: index.php");
-        exit(); // Importante: detiene el script para asegurar la redirección
-        
+        $sql = "SELECT id, name, password FROM customers WHERE email = ?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $resultado = $stmt->get_result();
+
+        if ($resultado->num_rows === 1) {
+            $usuario = $resultado->fetch_assoc();
+
+            // Texto Plano)
+            // Compara directamente si son iguales
+            if ($password == $usuario['password']) { 
+                
+                $_SESSION['user_id'] = $usuario['id'];
+                $_SESSION['user_name'] = $usuario['name'];
+                
+                header("Location: index.php");
+                exit();
+            } else {
+                $error = "Contraseña incorrecta.";
+            }
+        } else {
+            $error = "No existe una cuenta con ese correo.";
+        }
+        $stmt->close();
     } else {
-        echo "<script>alert('Por favor llena todos los campos');</script>";
+        $error = "Por favor llena todos los campos.";
     }
 }
 ?>
@@ -32,13 +54,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Tilt+Warp&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="assets/css/login.css">
     
 </head> <body>
     
     <?php require 'includes/header.php'; ?>
 
     <div class="cnt">
+        <?php if(!empty($error)): ?>
+    <div style="color: red; text-align: center; margin-bottom: 10px;">
+        <?php echo $error; ?>
+    </div>
+<?php endif; ?>
         <form class="frm" action="" method="POST">
             
             <h2>Bienvenido de Nuevo</h2>

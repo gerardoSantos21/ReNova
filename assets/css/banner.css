@@ -1,0 +1,56 @@
+@import url(variables.css);
+
+.banner {
+    width: 100%;
+    background-color: #F7F8FA;
+    margin-top: 90px;
+    padding: 90px 0;
+}
+
+.banner-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+}
+
+.banner-content {
+    padding-right: 12px;
+}
+
+.banner-content h3 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.banner-content p {
+    font-size: 16px;
+    display: block;
+    margin-top: 15px;
+}
+
+.banner-content p:first-of-type {
+    color: var(--colorPrincipal);
+}
+
+.banner-content p:last-of-type {
+    margin-bottom: 40px;
+}
+
+.banner-list-items::before {
+    content: ""; /* Obligatorio, pero se deja vacío */
+    display: inline-block; /* Para que puedas manipular el tamaño */
+    width: 16px; /* Tamaño del icono/imagen */
+    height: 16px;
+    margin-right: 8px; /* Espacio entre el icono y el texto */
+
+    /* Carga de la imagen */
+    background-image: url('../img/checkmark-circle.svg'); 
+    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
+    background-repeat: no-repeat;
+    vertical-align: middle; /* Alinea con el texto del párrafo */
+}
+
+.banner-list-items span {
+    font-weight: 500;
+}

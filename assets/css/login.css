@@ -141,14 +141,14 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%; /* Cada botón ocupa la mitad */
+    width: 50%; 
     padding: 10px;
     background-color: white;
-    border: 1px solid #ced4da; /* Borde gris suave */
+    border: 1px solid #ced4da; 
     border-radius: 8px;
-    border-radius: 5px; /* Bordes redondeados */
-    text-decoration: none; /* Quita el subrayado del link */
-    color: #333; /* Color de letra negro/gris oscuro */
+    border-radius: 5px; 
+    text-decoration: none; 
+    color: #333; 
     font-weight: 600;
     transition: background-color 0.3s ease;
 }
