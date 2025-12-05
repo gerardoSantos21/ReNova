@@ -28,13 +28,6 @@
         </div>
         <div class="productos-content">
             <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
         </div>
     </section>
 
