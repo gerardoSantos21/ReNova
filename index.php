@@ -1,3 +1,7 @@
+<?php
+
+require_once 'includes/conexion.php'; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,14 +31,7 @@
             <p>Equipos certificados con el mejor rendimiento garantizado.</p>
         </div>
         <div class="productos-content">
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
-            <?php require 'includes/card.php'; ?>
+        <?php require 'includes/card.php'; ?>
         </div>
     </section>
 
