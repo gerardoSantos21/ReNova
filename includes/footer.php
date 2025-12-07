@@ -4,7 +4,7 @@
             <section class="logo-footer">
                 <div class="logo logo--v2">
                     <a href="#" class="logo-content">
-                    <img src="./assets/img/logo_black.svg" alt="Logo ReNova">
+                    <img src="assets/img/logo_black.svg" alt="Logo ReNova">
                     <h1>ReNova</h1>
                     </a>
                 </div>
