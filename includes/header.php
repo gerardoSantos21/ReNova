@@ -1,6 +1,6 @@
 <header>
     <div class="logo">
-        <a href="#" class="logo-content">
+        <a href="index.php" class="logo-content">
             <img src="assets/img/logo.svg" alt="Logo ReNova">
             <h1>ReNova</h1>
         </a>
@@ -11,7 +11,7 @@
         <a href="#">Contactanos</a>
     </nav>
     <div class="sesion_icons">
-        <a href="#"><img src="assets/img/user.svg" alt="Icono de sesion"></a>
-        <a href="#"><img src="assets/img/cart.svg" alt="Icono de carrito"></a>
+        <a href="login.php"><img src="assets/img/user.svg" alt="Icono de sesion"></a>
+        <a href="viewCart.php"><img src="assets/img/cart.svg" alt="Icono de carrito"></a>
     </div>
 </header>

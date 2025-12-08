@@ -74,3 +74,52 @@
 .price::before {
     content: "$";
 }
+
+.price2 {
+    text-align: left;
+}
+
+.option {
+    font-size: 18px;
+    color: var(--colorPrincipal);
+    text-decoration: underline;
+    text-align: center;
+    display: block;
+}
+
+.option2 {
+    display: inline-block;
+}
+
+.list-product {
+    display: flex;
+    gap: 30px;
+}
+
+.product-info p {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.image-count-icon {
+    position: relative;
+    margin-bottom: 18px;
+}
+
+.count-icon {
+    font-size: 16px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: var(--colorPrincipal);
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    top: -8px;
+    right: -8px;
+}
