@@ -1,6 +1,6 @@
 <?php
 // Incluimos la clase del carrito y creamos la instancia
-include 'Cart.php';
+include 'includes/Cart.php';
 $cart = new Cart;
 ?>
 <!DOCTYPE html>

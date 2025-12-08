@@ -63,6 +63,10 @@
     gap: 100px;
     margin-bottom: 60px;
 }
+.boton{
+    border: none;
+    cursor:pointer;
+}
 
 .detalles-cart {
     background-color: #F2F2F2;
