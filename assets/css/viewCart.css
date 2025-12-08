@@ -13,18 +13,6 @@
     margin-bottom: 18px;
 }
 
-.option {
-    font-size: 18px;
-    color: var(--colorPrincipal);
-    text-decoration: underline;
-    text-align: center;
-    display: block;
-}
-
-.option2 {
-    display: inline-block;
-}
-
 .list {
     display: grid;
     grid-template-areas: 
@@ -43,16 +31,6 @@
 
 .list p {
     font-size: 18px;
-}
-
-.list-product {
-    display: flex;
-    gap: 30px;
-}
-
-.product-info p {
-    font-size: 22px;
-    margin-bottom: 12px;
 }
 
 input[type="number"] {
