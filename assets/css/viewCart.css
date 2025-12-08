@@ -1,0 +1,59 @@
+@import url(variables.css);
+
+.main-carrito {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.main-carrito h2 {
+    font-size: 26px;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.list {
+    display: grid;
+    grid-template-areas: 
+    "productos opcion1 opcion2 opcion3"
+    "item precio cantidad sbutotal";
+    grid-template-columns: 50% repeat(3, 1fr);
+    row-gap: 30px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.list h4 {
+    border-bottom: 1px solid #E5E5E5;
+    padding-bottom: 12px;
+}
+
+.list p {
+    font-size: 18px;
+}
+
+input[type="number"] {
+    width: 60px;
+    padding: 4px;
+    border: 2px solid var(--colorPrincipal);
+}
+
+.seccion-pago {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 45px;
+    border-top: 1px solid #E5E5E5;
+    padding-top: 12px;
+    margin-top: 30px;
+}
+
+.seccion-pago p {
+    font-size: 20px;
+}
+
+.seccion-pago span {
+    font-weight: 500;
+}
