@@ -1,7 +1,5 @@
 <?php
-// includes/Cart.php
 
-// 1. Manejo seguro de sesión (Mejor que poner session_start() a secas)
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -9,7 +7,7 @@ if (session_status() == PHP_SESSION_NONE) {
 class Cart {
     protected $cart_contents = array();
 
-    // ESTRUCTURA IDENTICA A TU TXT
+
     public function __construct(){
         $this->cart_contents = !empty($_SESSION['cart_contents']) ? $_SESSION['cart_contents'] : NULL;
         if ($this->cart_contents === NULL){
@@ -17,7 +15,7 @@ class Cart {
         }
     }
 
-    // ESTRUCTURA IDENTICA A TU TXT
+
     public function contents(){
         $cart = array_reverse($this->cart_contents);
         unset($cart['total_items']);
@@ -25,7 +23,7 @@ class Cart {
         return $cart;
     }
 
-    // ESTRUCTURA IDENTICA A TU TXT
+
     public function get_item($row_id){
         return (in_array($row_id, array('total_items', 'cart_total'), TRUE) OR ! isset($this->cart_contents[$row_id]))
             ? FALSE
@@ -37,12 +35,12 @@ class Cart {
         return $this->cart_contents['total_items'];
     }
 
-    // ESTRUCTURA IDENTICA A TU TXT
+
     public function total(){
         return $this->cart_contents['cart_total'];
     }
 
-    // ESTRUCTURA IDENTICA A TU TXT
+
     public function insert($item = array()){
         if(!is_array($item) OR count($item) === 0){
             return FALSE;
@@ -64,7 +62,7 @@ class Cart {
                 $item['qty'] += $old_qty;
                 $this->cart_contents[$rowid] = $item;
                 
-                // AQUÍ TU CODIGO PEDIA save_cart, AHORA YA EXISTE
+  
                 if($this->save_cart()){
                     return isset($rowid) ? $rowid : TRUE;
                 }else{
